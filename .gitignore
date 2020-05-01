@@ -1,3 +1,4 @@
 *.zip
 *.pdf
 wordpress_themes/
+.vscode

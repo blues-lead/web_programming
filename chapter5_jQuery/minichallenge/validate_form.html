@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>Form validation</title>
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2&family=Roboto&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style type="text/css">
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Baloo Thambi 2', cursive;
+            font-size: 120%;
+        }
+
+        input {
+            border-radius: 5px;
+            border: 1px solid gray;
+            margin-left: 10px;
+            height:30px;
+            width:250px;
+            padding-left: 5px;
+            
+        }
+
+        #user_form {
+            margin: 0 auto;
+            width: 70%;
+            height: 300px;
+            background-color: lightgray;
+            border-radius: 15px;
+            padding:10px;
+        }
+        label {
+            position: relative;
+            float:left;
+            width:200px;
+        }
+
+        .form_element {
+            width:100%;
+            margin-bottom: 10px;
+        }
+
+        
+        </style>
+    </head>
+    <body>
+        <div id="user_form">
+            <div class="form_element">
+                <label for="email">Your e-mail address:</label>
+                <input type="text" name="email" id="email" placeholder="heikki.esimerkki@eposti.fi">               
+            </div>
+            <div class="form_element">
+                <label for="tel">Your telephone number:</label>            
+                <input type="text" name="tel" id="tel" placeholder="+3 #### ### ## ##">
+            </div>
+            <div class="form_element">
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password"><button id="show">Show password</button>            
+            </div>
+            <div class="form_element">
+                <label for="cpassword">Confirm password:</label>            
+                <input type="password" name="cpassword" id="cpassword">
+            </div>
+            <div class="form_element">
+                <input type="submit" id="send_button" value="Sign Up" style="position: relative; right:-200px;">
+
+            </div>
+        </div>
+        
+        <!--<div id="user_form">
+                <label for="email">Your e-mail address:</label>
+                <input type="text" name="email" id="email" placeholder="heikki.esimerkki@eposti.fi">
+
+                <label for="tel">Your telephone number:</label>
+                <input type="text" name="tel" id="tel" placeholder="+3 #### ### ## ##">
+        </div>-->
+        <script type="text/javascript" src="val_form.js"></script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style type="text/css">
+        #playground {
+            margin:0 auto;
+            padding:5px;
+            height:50px;
+
+        }
+
+        </style>
+    </head>
+    <body>
+        <div id="playground">
+            <p id="paragraph">I have to tell all of you that Басурмане идут</p><br>
+        </div>
+        <button id="toggle">Fade/Unfade paragraph</button>
+        <script type="text/javascript">
+        $("#toggle").click(function() {
+            if ($("#paragraph").css("display") == "none") {
+                $("#paragraph").fadeIn(1000);
+            }
+            else {
+                $("#paragraph").fadeOut(1000);
+            }
+
+        })
+         
+        </script>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Test your reaction</title>
+        <style type="text/css">
+        body {
+            margin:0;
+            padding:0;
+        }
+        #header {
+            height:150px;
+            width:100%;
+            background-color: white;
+            margin:0;
+            padding:0;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <h1>Test your Reactions!</h1>
+            <p><h2>Click on the boxes and circles as quickly as you can!</h2></p>
+            <p id="your_time">Your time: </p>
+        </div>
+        <div id="playground" style="background-color: white; width:100%; height:500px; margin:0; padding:0;">
+        </div>
+        <script type="text/javascript">
+        var t0 = 0;
+        var t1 = 0;
+        document.getElementById("playground").appendChild(generateElement());
+
+        document.getElementById("dvReact").onclick = function() {
+            t1 = performance.now();
+            t0=0;
+            t1=0;
+            var element = document.getElementById("dvReact");
+            element.parentNode.removeChild(element);
+            newdv = generateElement();
+            newdv.onclick = "generateElement()";
+            document.getElementById("playground").appendChild(newdv);
+            //document.getElementById("your_time").innerHTML = "Your time: " + (t1-t0);
+        }
+
+
+        function generateElement() {
+            t0 = 0;
+            var colours = ["red","green","blue","yellow","magenta"];
+            var roundings = [0, 50];
+            sizes = document.getElementById("playground").getBoundingClientRect();
+            var width = Math.random()*150 + 30; //width,height in pixels
+            var y_top = sizes.y;
+            var y_bottom = y_top + sizes.height;
+            var tp = Math.random()*(y_bottom - width - y_top) + y_top; //top positioin
+
+            var x_left = sizes.x;
+            var x_right = x_left + sizes.width;
+            var lt = Math.random()*(x_right-width); //left position
+
+            var dv = document.createElement("div");
+            dv.style.width = width + "px";
+            dv.style.height = width + "px";
+            dv.style.backgroundColor = colours[Math.floor(Math.random()*5)];
+            dv.style.position = "absolute";
+            dv.style.top = tp + "px";
+            dv.style.left = lt + "px";
+            dv.style.margin = "0";
+            dv.style.padding = "0";
+            dv.style.borderRadius = roundings[Math.floor(Math.random()*3)] + "%";
+            dv.id = "dvReact";
+            t0 = performance.now();
+            return (dv);
+
+        }
+        </script>
+
+    </body>
+</html>

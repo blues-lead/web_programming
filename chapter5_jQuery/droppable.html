@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>jQuery UI</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <style type="text/css">
+           #basket {
+               margin: 0 auto;
+               width:80%;
+               height:200px;
+               border: 1px gray solid;
+           }
+           #ball {
+               width:100px;
+               height:100px;
+               background-color: skyblue;
+           }
+        </style>
+        
+    </head>
+    <body>
+        <div id="basket">
+
+        </div>
+        <div id="ball">
+
+        </div>
+        <script type="text/javascript">
+            $("#ball").draggable();
+            $("#basket").droppable({
+                drop:function(event,ui) {
+                    ui.draggable.css("background-color","green");
+                }
+            })
+        </script>
+    </body>
+</html>

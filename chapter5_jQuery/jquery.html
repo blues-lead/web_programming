@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style type="text/css">
+        #playground {
+            margin:0 auto;
+            padding:5px;
+
+        }
+
+        #circle {
+            margin-left: 20px;
+            width:200px;
+            height:200px;
+            border-radius: 50%;
+            background-color: green;
+            float:left;
+
+        }
+        #red_square1 {
+            
+            width:200px;
+            height:200px;
+            background-color: red;
+            float:left;
+        }
+
+        #red_square2 {
+            width:200px;
+            height:200px;
+            background-color: red;
+            float:left;
+
+        }
+
+        .squares {
+            margin-left: 20px;
+        }
+        </style>
+    </head>
+    <body>
+        <div id="playground">
+            <div id="circle"></div>
+        </div>
+        <div class="squares" id="red_square1"></div>
+        <div class="squares" id="red_square2"></div>
+        <p>
+            <iframe src="https://www.is.fi/" style="width:80%; height:300px;margin:10px"></iframe>
+        </p>
+        <script type="text/javascript">
+          /*$("#circle").hover(function(){
+              $("p").html("Mouse over the circle");
+          })*/
+          /*$("#circle").click(function(){
+              //$("iframe").attr("src","https://meduza.io");
+              //$("#circle").css("backgroundColor","red");
+              $("#circle").css("backgroundColor","red");
+              var $wdt = $("body").css("width");
+              $(".squares").css("display","none");
+              
+          })*/
+          $("div").click(function(){
+              //$(this).css("display","none");
+              //alert("You clicked " + $(this).attr("id"));
+              $(this).fadeOut("slow", function() {
+                  alert($(this).attr("id") + " was faded");
+              });
+          })
+        </script>
+    </body>
+</html>

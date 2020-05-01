@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>JavaScript</title>
+    </head>
+    <body>
+        <p id="text"> Hejssan svenskarna </p>
+        <button id="myButton">Change text to:</button>
+        <input id="myText" type="text">
+        <p id="secondParagraph">Javascript is ...</p>
+        <button id="JSis">Fill the text</button>
+        <p id="thirdParagraph"></p>
+        <button id="createContent">Create content</button>
+        <p id="moreText">This is some text</p>
+        <button id="styleText">Change style</button>
+
+        <script type="text/JavaScript">
+            document.getElementById("myButton").onclick = function() {
+                document.getElementById("text").innerHTML = "Братья, басурмане, давате жить дружно!";
+            }
+
+            document.getElementById("JSis").onclick = function() {
+                //document.getElementById("secondParagraph").innerHTML = document.getElementById("secondParagraph").innerHTML + "sounds at least good";
+                var n_str = document.getElementById("secondParagraph").innerHTML;
+                document.getElementById("secondParagraph").innerHTML = "I think, that " + n_str + "awesome";
+            }
+
+            document.getElementById("createContent").onclick = function () {
+                document.getElementById("thirdParagraph").innerHTML = "<h1>Hello, I am here!</h1>";
+            }
+
+            document.getElementById("styleText").onclick = function () {
+                document.getElementById("moreText").style.color = "red";
+                document.getElementById("JSis").style.display = "none";
+            }
+
+            document.getElemntById("styleText")
+
+        </script>
+    </body>
+</html>

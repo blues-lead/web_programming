@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Variables</title>
+    </head>
+    <body>
+        <p><input type="text" id="magicWord"><button id="btnCheck">Check the word</button></p>
+        <script type="text/javascript">
+           var my_word = "Basurmane";
+           document.getElementById("btnCheck").onclick = function() {
+               var user_word = document.getElementById("magicWord").value;
+               if (user_word == my_word) {
+                   alert('You knew that!');
+               }
+               else {
+                   alert('Error');
+               }
+           }
+        </script>
+    </body>
+</html>

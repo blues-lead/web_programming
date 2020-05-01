@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Variables</title>
+    </head>
+    <body>
+        <p><input id="txtChange" type="text"><button id="btnChange">Change text</button></p>
+        <p id="txtToChange">This is some text</p>
+        <script type="text/javascript">
+        document.getElementById("btnChange").onclick = function() {
+            var user_text = "";
+            //document.getElementById("txtToChange").style.display = "none";
+            var user_text = document.getElementById("txtChange").value;
+            document.getElementById("txtToChange").innerHTML = user_text;
+        }
+        </script>
+    </body>
+</html>

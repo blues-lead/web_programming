@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Variables</title>
+    </head>
+    <body>
+        <p>How many fingers I am holding up?</p>
+        <p><input type="text" id="answer"></p>
+        <button id="btnAnswer">Answer</button>
+        <script type="text/javascript">
+            right_answer = Math.floor(Math.random() * 6);
+            document.getElementById("btnAnswer").onclick = function() {
+               var guess = document.getElementById("answer").value;
+               if (guess == right_answer) {
+                    alert('You Won!');
+               }
+               else {
+                    document.getElementById("btnAnswer").value = "";
+                    alert('Nope. Try again');
+               }
+           }
+
+        </script>
+    </body>
+</html>

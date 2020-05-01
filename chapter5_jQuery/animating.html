@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>jQuery</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <style type="text/css">
+        #playground {
+            margin:0 auto;
+            padding:5px;
+            height:50px;
+
+        }
+        #circle {
+            margin-left: 20px;
+            width:200px;
+            height:200px;
+            border-radius: 50%;
+            background-color: green;
+            float:left;
+
+        }
+
+        </style>
+    </head>
+    <body>
+        <div id="playground">
+            <div id="circle"></div>
+        </div>
+        <script type="text/javascript">
+        var params_end = {width:"700px",height:"700px", marginLeft:"1000px",marginTop:"1000px"};
+        var params_start = {width:"200px",height:"200px",marginLeft:"5px", marginTop:"10px"};
+        $("#circle").click(function() {
+            $(this).animate(params_end,2000, function() {
+                $(this).animate(params_start,2000);
+                $(this).css("background-color","red");
+            })
+        })
+
+        </script>
+    </body>
+</html>

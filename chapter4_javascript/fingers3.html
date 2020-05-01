@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Variables</title>
+        <style type="text/css">
+        #machine {
+            width:50%;
+            background-color: cornsilk;
+            border: 5px red solid;
+            border-radius: 50px;
+            text-align: center;
+            margin:0 auto;
+        }
+        </style>
+    </head>
+    <body>
+        
+        <p>How many fingers I am holding up?</p>
+        <!--<p><input type="text" id="hold_finger"><button id="btnRightAnswer">Set value</button></p>-->
+        <p><select id="hold_finger">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <button id="btnRightAnswer">Set value</button></p>
+        <button id="btnGuessing">Start Guessing</button>
+        <div id="machine"></div>
+        <script type="text/javascript">
+            function doAGuess(r_answer) {
+                var new_var = Math.floor(Math.random()*6);
+                if (r_answer == new_var) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+
+
+            document.getElementById("machine").style.display = "none";
+            var right_answer = 0;
+            document.getElementById("btnRightAnswer").onclick = function() {
+                right_answer = document.getElementById("hold_finger").value;
+            }
+
+            document.getElementById("btnGuessing").onclick = function () {
+                document.getElementById("machine").style.display = "block";
+                var guessed = Math.floor(Math.random()*6);
+                while (true) {
+                    //var my_guess = Math.floor(Math.random()*6);
+                    //var m_string = "<p>I will try " + my_guess;
+                    console.log(my_guess);
+                    if (doAGuess(right_answer) == true) {
+                        console.log("found right");
+                        m_string = m_string + "and it is RIGHT, wohooo!</p>";
+                        document.getElementById("machine").innerHTML += m_string;
+                        break;
+                    }
+                    else {
+                        m_string = m_string + "and it is WRONG :(. Try again!</p>";
+                        document.getElementById("machine").innerHTML += m_string;
+                    }
+
+                }
+            }
+
+        </script>
+    </body>
+</html>

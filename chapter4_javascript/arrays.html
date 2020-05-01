@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Variables</title>
+    </head>
+    <body>
+        
+        <script type="text/javascript">
+            var myArray = new Array();
+            myArray[0] = "pizza";
+            myArray[1] = "banana";
+            myArray[2] = "melon";
+            console.log(myArray);
+            myArray.push("Lemon")
+            console.log(myArray);
+            //myArray.splice(1,2); //delete element 2 elements starting at index 1
+            myArray.splice(2,0,"Viktor");  //add element being index 2, third parameter element to be added, 0 - nothing to delete
+            console.log(myArray);
+            myArray.splice(2,1,"Ivan");
+            console.log(myArray);
+        </script>
+    </body>
+</html>

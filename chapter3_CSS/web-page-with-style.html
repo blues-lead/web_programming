@@ -1,0 +1,128 @@
+<html>
+    <head>
+        <title>Web page with style</title>
+        <style type="text/css">
+        .red {
+            color:red;
+        }
+        .large {
+            font-size: 200%;
+        }
+        #green {
+            color:green;
+        }
+        .underlined {
+            text-decoration: underline;
+        }
+        #first-section {
+            color:blue;
+            background-color: pink;
+            width: 200px;
+            position:relative;
+            left:100px;
+            top:100px;
+            z-index: 2;
+            opacity: 0.8;
+        }
+        #yellow {
+            background-color: yellow;
+            width:200px;
+            position:relative;
+            z-index: 1;
+        }
+        .without_floating {
+            clear:both;
+        }
+
+        .floated {
+            float: left;
+            width:200px;
+        }
+
+        .abs_pos {
+            position: absolute;
+            left: 300px;
+            top: 100px;
+
+        }
+
+        .fxd {
+            width:200px;
+            background-color: teal;
+            z-index: 3;
+            position:relative;
+            margin: 50px 20px 50px 20px;
+        }
+
+        .margins {
+            background-color: thistle;
+            width:200px;
+            margin: 100px 50px 20px 10px;
+            float: left;
+        }
+
+        .pads {
+            background-color: tomato;
+            width:200px;
+            padding-top:5px;
+            padding-right:20px;
+            padding-bottom: 15px;
+            padding-left:50px;
+        }
+
+        body {
+            margin:0px;
+            padding:0px;
+        }
+
+        p {
+            margin:0px;
+            padding:0px;
+        }
+
+        </style>
+    </head>
+    <body>
+        <h1 class="blue">My s lisukom</h1>
+        <div class="fxd">
+            <p>
+                And now we are going to explore FIXED positioning. Deal with that!
+            </p>
+        </div>
+        <div id="first-section">
+        <p>
+            My s lisukom izuchaem web programmirovanie nachinaya s HTML i seichas drochim CSS.
+        </p>
+        <p>
+            I lisukanec tut teper tozhe herachit na CSS kak drevniy monah-starec
+        </p>
+        </div>
+        <div id="yellow">
+        <p>Tämä on ympäristöystävällinen teksti</p>
+        <p>Tämä on myös ympäristöystävällinen teksti, mutta tämä teksti ei ole ympäristöystävällinen</p>
+        </div>
+        <div>
+            <p>This is floated text and we gonna have fun with it</p>
+        </div>
+        <div class="without_floating"></div>
+        <p class="floated">This is text asdf asd ssdfadsf saf a a sdf asdfasdfasd fasdf</p>
+
+
+        <div class="without_floating"></div>
+        <div class="abs_pos">
+            <p>
+                And now we are going to explore absolute positioning. Deal with that!
+            </p>
+        </div>
+        <div class="margins">
+            <p>Ja hujeju bez bayana<br>nahuja koze bajan</p>
+        </div>
+        <div class="margins">
+            <p>Zdravstvui dedushka moroz<br>boroda iz vaty</p>
+        </div>
+        <div class="without_floating"></div>
+        <div class="pads">
+            <p>Ty podarki nam prines<br>pedaras gorbatyi?</p>
+        </div>
+    </body>
+</html>

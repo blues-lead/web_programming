@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <title>jQuery UI</title>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        <style type="text/css">
+        .draggable {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+        .resizable {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+        }
+
+        .p1 {
+            width: 100px;
+            height: 100px;
+            border: 1px black solid;
+        }
+
+        .p2 {
+            width: 100px;
+            height: 100px;
+            border: 1px black solid;
+        }
+
+        .p3 {
+            width: 100px;
+            height: 100px;
+            border: 1px black solid;
+        }
+
+        #wrapper {
+            margin:0 auto;
+            width: 80%;
+            height:300px;
+            border:1px black solid;
+        }
+        #resizable-container {
+            width:80%;
+            height:300px;
+            border:1px black solid;
+            margin:0 auto;
+            margin-top:5px;            
+        }
+        </style>
+        
+    </head>
+    <body>
+        <div id="wrapper">
+            <div class="draggable">
+                <p class="p1">Drag me around 1</p>
+            </div>
+            <div class="draggable">
+                <p class="p1">Drag me around 2</p>
+            </div>
+        </div>
+        <div id="resizable-container">
+            <div class="resizable draggable">
+                <p class="p2">Resize me1</p>
+            </div>
+            <div class="resizable draggable">
+                <p class="p2">Resize me2</p>
+            </div>
+        </div>
+        <button id="secure">Draggable/nondraggable</button>
+        <script type="text/javascript">
+           $(".draggable").draggable({containment:"parent"});
+           $(".resizable").resizable({containment:"parent", alsoResize:".p2"});
+           $("#secure").click(function(){
+               var divs = $(".draggable").draggable("option","disabled");
+               if (divs == true) {
+                    $(".draggable").draggable("option","disabled",false);
+               }
+               else {
+                    $(".draggable").draggable("option","disabled",true);
+               }
+               
+           })
+            </script>
+    </body>
+</html>
